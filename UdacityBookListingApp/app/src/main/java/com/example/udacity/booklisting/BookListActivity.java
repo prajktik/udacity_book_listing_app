@@ -132,10 +132,9 @@ public class BookListActivity extends AppCompatActivity implements LoaderManager
         mLoadingIndicator.setVisibility(View.GONE);
         mEmptyView.setVisibility(View.VISIBLE);
         mEmptyView.setText(R.string.empty_view);
-
+        mAdapter.clear();
         if(books != null && !books.isEmpty()){
-            mAdapter.clear();
-           mAdapter.addAll(books);
+                mAdapter.addAll(books);
         }
     }
 
