@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="fill_parent"
+				android:background="@color/colorPrimary"
+				android:orientation="vertical"
+				android:padding="16dp"
+				tools:context="com.example.udacity.booklisting.BookListActivity">
+	
+	<LinearLayout
+		android:id="@+id/layout_search"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="8dp"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/border_primary">
+		
+		<EditText
+			android:id="@+id/et_search"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:hint="@string/search_hint"
+			android:maxLines="1"/>
+		
+		<ImageView
+			android:id="@+id/action_search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/ic_search"/>
+	
+	</LinearLayout>
+	
+	<ProgressBar
+		android:id="@+id/loading_indicator"
+		style="@style/Widget.AppCompat.ProgressBar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:visibility="gone"/>
+	
+	<ListView
+		android:id="@+id/book_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/layout_search"
+		android:background="@color/colorPrimary"
+		android:divider="@color/colorPrimary"
+		android:dividerHeight="3dp"
+		android:drawSelectorOnTop="true"
+		android:orientation="vertical"/>
+	
+	<TextView
+		android:id="@+id/empty_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+</RelativeLayout>
